@@ -1,10 +1,12 @@
 "use client";
+import { IFakeApiCall } from "@/app/page";
 import { FC } from "react";
 
-const FunctionCaller: FC = () => {
+const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
     return (
         <div>
             <button onClick={printLine}>Click me!</button>
+            <p>Hello, my name is: {name}</p>
         </div>
     );
 };
