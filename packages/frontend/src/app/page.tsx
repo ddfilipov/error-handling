@@ -1,8 +1,13 @@
+import { ApiError } from "@/lib/apiError";
 import FunctionCaller from "../components/FunctionCaller";
 
 export default async function Home() {
-    const data: IFakeApiCall = await fakeApiCall();
-    return <FunctionCaller name={data.name} />;
+    try {
+        const data: IFakeApiCall = await fakeApiCall();
+    } catch (error) {
+        console.error("Something went wrongEEEEEEEEEEEE");
+    }
+    return <FunctionCaller name={"data.name"} />;
 }
 
 export interface IFakeApiCall {
