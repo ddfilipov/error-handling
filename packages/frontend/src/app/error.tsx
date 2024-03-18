@@ -10,7 +10,7 @@ export default function GeneralError({ error, reset }: { error: Error & { digest
 
     return (
         <div>
-            <h2>Something went wrong!</h2>
+            <h2>{`Here's your error: ${error.message}`}</h2>
             <button
                 onClick={
                     // Attempt to recover by trying to re-render the segment

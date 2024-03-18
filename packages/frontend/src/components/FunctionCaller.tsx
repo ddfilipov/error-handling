@@ -1,8 +1,7 @@
 "use client";
-import GeneralError from "@/app/error";
 import { IFakeApiCall } from "@/app/page";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import { FC } from "react";
+import {} from "next/error"
 
 const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
     return (
@@ -14,8 +13,12 @@ const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
 };
 
 function printLine() {
-    throw new Error("Client error!");
-    console.log("Hello World");
+    try {
+        throw new Error("Client error!");
+    } catch {
+        console.error("error while clicking button");
+    }
+    console.log("I'm clicking the button!");
 }
 
 export default FunctionCaller;

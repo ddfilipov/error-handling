@@ -3,7 +3,7 @@ import FunctionCaller from "../components/FunctionCaller";
 
 export default async function Home() {
     const data: IFakeApiCall = await fakeApiCall();
-    throw new Error("Pete");
+    // throw new Error("Pete");
     return <FunctionCaller name={data.name} />;
 }
 
