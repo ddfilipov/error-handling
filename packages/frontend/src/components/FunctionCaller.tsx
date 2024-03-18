@@ -1,18 +1,22 @@
 "use client";
 import { IFakeApiCall } from "@/app/page";
-import { FC } from "react";
-import {} from "next/error"
+import { FC, useState } from "react";
 
 const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
+    const [errores, setErrores] = useState<boolean>(false);
+    if (errores) {
+        throw new Error("algo ha pasado...");
+    }
     return (
         <div style={{ border: "1px solid red", padding: "10px" }}>
-            <button onClick={printLine}>Click me for client error!</button>
+            <button onClick={() => setErrores(printLine)}>Click me for client error!</button>
             <p>Hello, my name is: {name}</p>
         </div>
     );
 };
 
-function printLine() {
+function printLine(): boolean {
+    return true;
     try {
         throw new Error("Client error!");
     } catch {
