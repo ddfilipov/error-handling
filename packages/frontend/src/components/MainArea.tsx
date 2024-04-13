@@ -10,6 +10,7 @@ import * as Styled from "./styled";
 interface MainAreaProps {
     companyData: {
         companyName: string;
+        address: { addressName: string; addressNumber: number };
         employees: EmployeeData[];
     };
 }
@@ -22,7 +23,7 @@ const MainArea: FC<MainAreaProps> = ({ companyData }) => {
     return (
         <Styled.MainContainer>
             <Styled.ChildrenContainer>
-                <UncontrolledClientError employeeData={companyData.employees}/>
+                <UncontrolledClientError employeeData={companyData.employees} address={companyData.address}/>
             </Styled.ChildrenContainer>
         </Styled.MainContainer>
     );
