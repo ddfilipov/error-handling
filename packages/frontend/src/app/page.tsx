@@ -1,17 +1,29 @@
 // import { ApiError } from "@/lib/apiError";
-import FunctionCaller from "../components/MainArea";
+import MainArea from "../components/MainArea";
 
 export default async function Home() {
     const data: IFakeApiCall = await fakeApiCall();
-    return <FunctionCaller name={data.name} />;
+    return <MainArea companyData={data} />;
+}
+
+export interface EmployeeData {
+    name: string;
+    age: number;
 }
 
 export interface IFakeApiCall {
-    name: string;
+    companyName: string;
+    employees: EmployeeData[];
 }
 
 async function fakeApiCall(): Promise<IFakeApiCall> {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     // throw new Error("Something went wrongggggggggggggg");
-    return { name: "Denis" };
+    return {
+        companyName: "Patterson",
+        employees: [
+            { name: "Pere", age: 30 },
+            { name: "Juan", age: 30 },
+        ],
+    };
 }

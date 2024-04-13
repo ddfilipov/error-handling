@@ -1,13 +1,20 @@
 "use client";
 import { FC, useState } from "react";
 
-import { IFakeApiCall } from "@/app/page";
+import { EmployeeData, IFakeApiCall } from "@/app/page";
 
 import UncontrolledClientError from "./UncontrolledClientError";
 
 import * as Styled from "./styled";
 
-const MainArea: FC<IFakeApiCall> = ({ name }) => {
+interface MainAreaProps {
+    companyData: {
+        companyName: string;
+        employees: EmployeeData[];
+    };
+}
+
+const MainArea: FC<MainAreaProps> = ({ companyData }) => {
     const [errores, setErrores] = useState<boolean>(false);
     if (errores) {
         throw new Error("algo ha pasado...");
@@ -15,7 +22,7 @@ const MainArea: FC<IFakeApiCall> = ({ name }) => {
     return (
         <Styled.MainContainer>
             <Styled.ChildrenContainer>
-                <UncontrolledClientError />
+                <UncontrolledClientError employeeData={companyData.employees}/>
             </Styled.ChildrenContainer>
         </Styled.MainContainer>
     );

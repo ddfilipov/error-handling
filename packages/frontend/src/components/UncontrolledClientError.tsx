@@ -1,13 +1,26 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import * as Styled from "./styled";
+import { EmployeeData } from "@/app/page";
 
-const UncontrolledClientError: FC = () => {
+interface UncontrolledClientErrorProps {
+    employeeData: EmployeeData[];
+}
+
+const UncontrolledClientError: FC<UncontrolledClientErrorProps> = ({ employeeData }) => {
+    const [myData, setMyData] = useState<string>(employeeData[0].name);
     return (
         <Styled.ItemsContainer>
             <h2>Uncontrolled Client Error</h2>
-            <button onClick={() => {}}>Click me for an uncontrolled client error!</button>
+            <button
+                onClick={() => {
+                    setMyData(employeeData[1].name);
+                }}
+            >
+                Click me for an uncontrolled client error!
+            </button>
+            <p>{`myData value: ${myData}`}</p>
         </Styled.ItemsContainer>
     );
 };
