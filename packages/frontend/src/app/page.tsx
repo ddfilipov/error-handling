@@ -1,5 +1,5 @@
 // import { ApiError } from "@/lib/apiError";
-import FunctionCaller from "../components/FunctionCaller";
+import FunctionCaller from "../components/MainArea";
 
 export default async function Home() {
     const data: IFakeApiCall = await fakeApiCall();

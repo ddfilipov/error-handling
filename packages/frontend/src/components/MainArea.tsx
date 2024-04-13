@@ -2,7 +2,7 @@
 import { IFakeApiCall } from "@/app/page";
 import { FC, useState } from "react";
 
-const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
+const MainArea: FC<IFakeApiCall> = ({ name }) => {
     const [errores, setErrores] = useState<boolean>(false);
     if (errores) {
         throw new Error("algo ha pasado...");
@@ -25,4 +25,4 @@ function printLine(): boolean {
     console.log("I'm clicking the button!");
 }
 
-export default FunctionCaller;
+export default MainArea;
