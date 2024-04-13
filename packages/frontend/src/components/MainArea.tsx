@@ -1,6 +1,9 @@
 "use client";
-import { IFakeApiCall } from "@/app/page";
 import { FC, useState } from "react";
+
+import { IFakeApiCall } from "@/app/page";
+
+import UncontrolledClientError from "./UncontrolledClientError";
 
 import * as Styled from "./styled";
 
@@ -12,8 +15,7 @@ const MainArea: FC<IFakeApiCall> = ({ name }) => {
     return (
         <Styled.MainContainer>
             <Styled.ChildrenContainer>
-                <button onClick={() => setErrores(printLine)}>Click me for client error!</button>
-                <p>Hello, my name is: {name}</p>
+                <UncontrolledClientError />
             </Styled.ChildrenContainer>
         </Styled.MainContainer>
     );
