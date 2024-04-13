@@ -1,18 +1,28 @@
 "use client";
 import { IFakeApiCall } from "@/app/page";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 const FunctionCaller: FC<IFakeApiCall> = ({ name }) => {
+    const [errores, setErrores] = useState<boolean>(false);
+    if (errores) {
+        throw new Error("algo ha pasado...");
+    }
     return (
-        <div>
-            <button onClick={printLine}>Click me!</button>
+        <div style={{ border: "1px solid red", padding: "10px" }}>
+            <button onClick={() => setErrores(printLine)}>Click me for client error!</button>
             <p>Hello, my name is: {name}</p>
         </div>
     );
 };
 
-function printLine() {
-    console.log("Hello World");
+function printLine(): boolean {
+    return true;
+    try {
+        throw new Error("Client error!");
+    } catch {
+        console.error("error while clicking button");
+    }
+    console.log("I'm clicking the button!");
 }
 
 export default FunctionCaller;
