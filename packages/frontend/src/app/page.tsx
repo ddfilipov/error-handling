@@ -7,7 +7,7 @@ export default async function Home() {
 }
 
 export interface EmployeeData {
-    name: string;
+    name: string | undefined;
     age: number;
 }
 
@@ -21,9 +21,6 @@ async function fakeApiCall(): Promise<IFakeApiCall> {
     // throw new Error("Something went wrongggggggggggggg");
     return {
         companyName: "Patterson",
-        employees: [
-            { name: "Pere", age: 30 },
-            { name: "Juan", age: 30 },
-        ],
+        employees: [{ name: "Pere", age: 30 }],
     };
 }
