@@ -2,7 +2,7 @@
 import { FC, useState } from "react";
 
 import * as Styled from "./styled";
-import { EmployeeData } from "@error-handling/frontend/app/page";
+import { EmployeeData } from "@/app/page";
 
 interface UncontrolledClientErrorProps {
     employeeData: EmployeeData[];
