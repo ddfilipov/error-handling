@@ -1,14 +1,16 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response } from "express";
 
 const app = express();
 
-// Define a GET route
-app.get('/user', (req: Request, res: Response) => {
+app.get("/", (req, res) => {
+    res.send("Hello, world!");
+});
+
+app.get("/user", (req: Request, res: Response) => {
     res.json({ name: "denis", age: 31 });
 });
 
-// Set the port for the Express server
-const PORT: number | string = process.env.PORT || 3001;
+const PORT: number | string = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

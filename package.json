@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev:frontend": "pnpm --filter @error-handling/frontend run dev",
         "build:frontend": "pnpm --filter @error-handling/frontend run build",
-        "start:frontend": "pnpm --filter @error-handling/frontend run start"
+        "start:frontend": "pnpm --filter @error-handling/frontend run start",
+        "dev:backend": "pnpm --filter @error-handling/backend run dev"
     },
     "keywords": [],
     "author": "",
@@ -17,6 +18,7 @@
         "@types/node": "^20",
         "@types/react": "^18.2.79",
         "@types/react-dom": "^18.2.25",
+        "ts-node": "^10.9.2",
         "typescript": "^5.4.5"
     }
 }
