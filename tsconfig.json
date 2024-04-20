@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES2020", // Modern JavaScript output
+        "module": "CommonJS", // CommonJS for Node compatibility, adjust for frontend if needed
+        "baseUrl": ".", // Set base directory for non-relative module resolution
+        "paths": {
+            "@error-handling/backend/*": ["packages/backend/src/*"],
+            "@error-handling/frontend/*": ["packages/frontend/src/*"],
+            "@error-handling/common/*": ["packages/common/src/*"]
+        },
+        "outDir": "./dist", // Output directory for all compiled files
+        "rootDir": "./", // Root directory for all source files
+        "esModuleInterop": true, // Allows default imports from modules with no default export
+        "skipLibCheck": true, // Skip type checking of default library declaration files
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "packages/**/*" // Include all TypeScript files in all packages
+    ],
+    "exclude": [
+        "node_modules", // Standard practice to exclude node_modules
+        "**/*.spec.ts", // Exclude test files from compilation if any
+        "**/*.test.ts"
+    ]
+}

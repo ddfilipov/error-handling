@@ -6,7 +6,17 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
+      '@types/node':
+        specifier: ^20
+        version: 20.11.24
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
   packages/backend:
     dependencies:
@@ -20,6 +30,8 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/common: {}
 
   packages/frontend:
     dependencies:
@@ -1494,6 +1506,11 @@ packages:
 
   typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3245,6 +3262,8 @@ snapshots:
       possible-typed-array-names: 1.0.0
 
   typescript@5.3.3: {}
+
+  typescript@5.4.5: {}
 
   unbox-primitive@1.0.2:
     dependencies:
