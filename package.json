@@ -1,15 +1,15 @@
 {
-  "name": "error-handling",
-  "version": "1.0.0",
-  "description": "Project created to practice error handling in the frontend. Using Express.js and Nextjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm --filter frontend run dev",
-    "build": "pnpm --filter frontend run build",
-    "start": "pnpm --filter frontend start"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "error-handling",
+    "version": "1.0.0",
+    "description": "Project created to practice error handling in the frontend. Using Express.js and Nextjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev:frontend": "pnpm --filter @error-handling/frontend run dev",
+        "build:frontend": "pnpm --filter @error-handling/frontend run build",
+        "start:frontend": "pnpm --filter @error-handling/frontend run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
