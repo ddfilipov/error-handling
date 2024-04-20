@@ -1,11 +1,11 @@
 "use client";
 import { FC, useState } from "react";
 
-import { EmployeeData, IFakeApiCall } from "@/app/page";
 
 import UncontrolledClientError from "./UncontrolledClientError";
 
 import * as Styled from "./styled";
+import { EmployeeData } from "../app/page";
 
 interface MainAreaProps {
     companyData: {
