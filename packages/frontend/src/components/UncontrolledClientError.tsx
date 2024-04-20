@@ -10,6 +10,7 @@ interface UncontrolledClientErrorProps {
 }
 
 const UncontrolledClientError: FC<UncontrolledClientErrorProps> = ({ employeeData, address }) => {
+    console.log("employeeData: ", employeeData);
     const [myData, setMyData] = useState<string>(employeeData[0].name);
     return (
         <Styled.ItemsContainer>
@@ -22,7 +23,7 @@ const UncontrolledClientError: FC<UncontrolledClientErrorProps> = ({ employeeDat
                 Click me for an uncontrolled client error!
             </button>
             <p>{`myData value: ${myData}`}</p>
-            <p>{`address: ${address.addressName}`}</p>
+            {/* <p>{`address: ${address.addressName}`}</p> */}
         </Styled.ItemsContainer>
     );
 };

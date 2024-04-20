@@ -1,13 +1,19 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.send("Hello, world qweqweqwe!");
 });
 
 app.get("/user", (req: Request, res: Response) => {
-    res.json({ name: "denis", age: 31 });
+    res.json({
+        companyName: "Patterson",
+        employees: [{ name: "Pere", age: 30 }],
+    });
 });
 
 const PORT: number | string = process.env.PORT || 8080;

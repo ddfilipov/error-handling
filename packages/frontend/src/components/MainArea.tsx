@@ -16,6 +16,7 @@ interface MainAreaProps {
 }
 
 const MainArea: FC<MainAreaProps> = ({ companyData }) => {
+    console.log(companyData)
     const [errores, setErrores] = useState<boolean>(false);
     if (errores) {
         throw new Error("algo ha pasado...");

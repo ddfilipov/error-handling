@@ -1,7 +1,8 @@
 import MainArea from "../components/MainArea";
 
 export default async function Home() {
-    const data = await fakeApiCall();
+    const data = await apiCall();
+    console.log(data);
     return <MainArea companyData={data as IFakeApiCall} />;
 }
 
@@ -16,10 +17,9 @@ export interface IFakeApiCall {
     employees: EmployeeData[];
 }
 
-async function fakeApiCall(): Promise<unknown> {
+async function apiCall(): Promise<unknown> {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    return {
-        companyName: "Patterson",
-        employees: [{ name: "Pere", age: 30 }],
-    };
+    const res = await fetch("http://localhost:8080/user");
+    const resJson = await res.json();
+    return resJson;
 }
