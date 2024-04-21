@@ -10,7 +10,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req: Request, res: Response) => {
-    throw new Error("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrroooooooooooooorrrrrrrrrrrrrrrrrr wrong!");
+    throw new Error("ERORRR!");
+    // res.status(500).json({ error: "Esto es un error que viene del back" });
 
     res.json({
         companyName: "Patterson",

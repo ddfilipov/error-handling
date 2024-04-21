@@ -1,9 +1,8 @@
 import MainArea from "../components/MainArea";
 
 export default async function Home() {
-    console.log("what the actual fuck");
     const data = await apiCall();
-    console.log(data);
+    console.log("😜 data en page:", data);
     return <MainArea companyData={data as IFakeApiCall} />;
 }
 
@@ -19,10 +18,17 @@ export interface IFakeApiCall {
 }
 
 async function apiCall(): Promise<unknown> {
-    console.log("apiCall");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("apiCall 🔥");
     const res = await fetch("http://localhost:8080/user");
-    console.log("res", res);
+    console.log("ress 🔥🔥", res);
+    if (!res.ok) {
+        console.log("res.ok 🔥🔥", res.ok);
+        const resJson = await res.json();
+        console.log("program doesn't get here 🔥🔥🔥", resJson);
+        throw new Error(resJson.error);
+    }
+    console.log("res ok🔥🔥🔥🔥");
     const resJson = await res.json();
+    console.log("res json🔥🔥🔥🔥🔥", resJson);
     return resJson;
 }
