@@ -14,7 +14,7 @@ const UncontrolledClientError: FC<UncontrolledClientErrorProps> = ({ employeeDat
     const [myData, setMyData] = useState<string>(employeeData[0].name);
     return (
         <Styled.ItemsContainer>
-            <h2>Uncontrolled Client Error</h2>
+            <h2>Uncontrolled Client Error algo</h2>
             <button
                 onClick={() => {
                     setMyData(employeeData[1].name);

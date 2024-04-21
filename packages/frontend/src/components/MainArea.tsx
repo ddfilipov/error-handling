@@ -1,7 +1,6 @@
 "use client";
 import { FC, useState } from "react";
 
-
 import UncontrolledClientError from "./UncontrolledClientError";
 
 import * as Styled from "./styled";
@@ -16,7 +15,7 @@ interface MainAreaProps {
 }
 
 const MainArea: FC<MainAreaProps> = ({ companyData }) => {
-    console.log(companyData)
+    console.log("weqweqwe", companyData);
     const [errores, setErrores] = useState<boolean>(false);
     if (errores) {
         throw new Error("algo ha pasado...");
@@ -24,7 +23,7 @@ const MainArea: FC<MainAreaProps> = ({ companyData }) => {
     return (
         <Styled.MainContainer>
             <Styled.ChildrenContainer>
-                <UncontrolledClientError employeeData={companyData.employees} address={companyData.address}/>
+                <UncontrolledClientError employeeData={companyData.employees} address={companyData.address} />
             </Styled.ChildrenContainer>
         </Styled.MainContainer>
     );

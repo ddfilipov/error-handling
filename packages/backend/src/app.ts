@@ -10,9 +10,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req: Request, res: Response) => {
+    throw new Error("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrroooooooooooooorrrrrrrrrrrrrrrrrr wrong!");
+
     res.json({
         companyName: "Patterson",
-        employees: [{ name: "Pere", age: 30 }],
+        employees: [{ name: "Perere", age: 30 }],
     });
 });
 
