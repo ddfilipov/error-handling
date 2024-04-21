@@ -6,7 +6,7 @@
         "paths": {
             "@error-handling/backend/*": ["packages/backend/src/*"],
             "@error-handling/frontend/*": ["packages/frontend/src/*"],
-            "@error-handling/common/*": ["packages/common/src/*"]
+            "@error-handling/common/*": ["common/src/*"]
         },
         "outDir": "./dist", // Output directory for all compiled files
         "rootDir": "./", // Root directory for all source files
@@ -15,7 +15,8 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": [
-        "packages/**/*" // Include all TypeScript files in all packages
+        "packages/**/*", // Include all TypeScript files in all packages
+        "common"
     ],
     "exclude": [
         "node_modules", // Standard practice to exclude node_modules

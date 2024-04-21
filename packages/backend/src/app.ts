@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
+import { companyData } from "./data/data";
 
 const app = express();
 
@@ -15,10 +16,7 @@ app.get("/user", (req: Request, res: Response) => {
         // res.status(500).json({ error: "Esto es un error que viene del back" });
     }
 
-    res.json({
-        companyName: "Patterson",
-        employees: [{ name: "Perere", age: 30 }],
-    });
+    res.json(companyData);
 });
 
 const PORT: number | string = process.env.PORT || 8080;

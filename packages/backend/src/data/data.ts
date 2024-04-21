@@ -1,6 +1,8 @@
-import { Company } from "packages/common/types";
+import  {Company} from "@common/types"
 
-const companyData: Company = {
+
+
+export const companyData: Company = {
     companyName: "Patterson",
     address: { addressName: "123 Main St", addressNumber: 123 },
     employees: [
