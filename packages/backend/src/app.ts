@@ -10,8 +10,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req: Request, res: Response) => {
-    throw new Error("ERORRR!");
-    // res.status(500).json({ error: "Esto es un error que viene del back" });
+    if (shouldThrowError) {
+        throw new Error("ERORRR!");
+        // res.status(500).json({ error: "Esto es un error que viene del back" });
+    }
 
     res.json({
         companyName: "Patterson",
@@ -23,3 +25,5 @@ const PORT: number | string = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+const shouldThrowError: boolean = false;
