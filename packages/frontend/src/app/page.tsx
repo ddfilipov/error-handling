@@ -1,34 +1,19 @@
+import { Company } from "@common/types";
 import MainArea from "../components/MainArea";
 
 export default async function Home() {
-    const data = await apiCall();
+    const data: Company = await apiCall();
     console.log("😜 data en page:", data);
-    return <MainArea companyData={data as IFakeApiCall} />;
+    return <MainArea companyData={data} />;
 }
 
-export interface EmployeeData {
-    name: string;
-    age: number;
-}
-
-export interface IFakeApiCall {
-    companyName: string;
-    address: { addressName: string; addressNumber: number };
-    employees: EmployeeData[];
-}
-
-async function apiCall(): Promise<unknown> {
-    console.log("apiCall 🔥");
+async function apiCall(): Promise<Company> {
     const res = await fetch("http://localhost:8080/user");
-    console.log("ress 🔥🔥", res);
     if (!res.ok) {
         console.log("res.ok 🔥🔥", res.ok);
         const resJson = await res.json();
-        console.log("program doesn't get here 🔥🔥🔥", resJson);
         throw new Error(resJson.error);
     }
-    console.log("res ok🔥🔥🔥🔥");
-    const resJson = await res.json();
-    console.log("res json🔥🔥🔥🔥🔥", resJson);
+    const resJson: Company = await res.json();
     return resJson;
 }

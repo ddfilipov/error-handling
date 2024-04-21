@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import UncontrolledClientError from "./UncontrolledClientError";
 
 import * as Styled from "./styled";
-import { EmployeeData } from "@/app/page";
+import { EmployeeData } from "@common/types/index";
 
 interface MainAreaProps {
     companyData: {
