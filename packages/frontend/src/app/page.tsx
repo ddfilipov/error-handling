@@ -1,5 +1,13 @@
-import { Company } from "@common/types";
+import { Metadata } from "next";
+
 import MainArea from "../components/MainArea";
+
+import { Company } from "@common/types";
+
+export const metadata: Metadata = {
+    title: "Home",
+    description: "Homepage",
+};
 
 export default async function Home() {
     const data: Company = await apiCall();

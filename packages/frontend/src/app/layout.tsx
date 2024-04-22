@@ -1,18 +1,11 @@
 "use client";
 
-import type { Metadata } from "next";
 import "./globals.css";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import GeneralError from "./error";
 import StyledComponentsRegistry from "./registry";
 import styled from "styled-components";
 import Navbar from "src/components/Navbar";
 import Header from "src/components/Header";
 
-const metadata: Metadata = {
-    title: "Home",
-    description: "Homepage",
-};
 
 export default function RootLayout({
     children,
