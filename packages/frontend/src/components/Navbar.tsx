@@ -19,16 +19,22 @@ const Navbar: FC = ({}) => {
 export default Navbar;
 
 const Container = styled.div`
-    display: flex;
-    padding: 16px;
     ul {
+        display: flex;
+        flex-direction: column;
         list-style-type: none;
         padding: 0;
         margin: 0;
 
         li {
-            padding: 0;
+            display: flex;
+            flex-basis: 100%;
+            min-height: 50px;
+            align-items: center;
+            border: 1px solid #400;
+            padding: 5px;
             margin: 0;
+            width: auto;
         }
     }
 `;
