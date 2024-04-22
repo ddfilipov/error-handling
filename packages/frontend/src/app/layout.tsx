@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import GeneralError from "./error";
-
-const inter = Inter({ subsets: ["latin"] });
+import StyledComponentsRegistry from "src/lib/StyledJsxRegistry";
 
 export const metadata: Metadata = {
     title: "Home",
@@ -18,7 +16,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body>
+                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </body>
         </html>
     );
 }
