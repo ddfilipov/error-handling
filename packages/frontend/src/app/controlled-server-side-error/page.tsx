@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { PagesMainArea } from "src/components/PagesMainArea";
 
 export const metadata: Metadata = {
     title: "Controlled SSE",
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default async function ControlledServerSiderError() {
-    return <p>ControlledServerSiderError</p>;
+    return (
+        <PagesMainArea pageName="ControlledServerSiderError">
+            <div>ControlledServerSiderError content</div>
+        </PagesMainArea>
+    );
 }

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { PagesMainArea } from "src/components/PagesMainArea";
 
 export const metadata: Metadata = {
     title: "Unontrolled CSE",
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default async function UnontrolledClientSiderError() {
-    return <p>UncontrolledClientSiderError</p>;
+    return (
+        <PagesMainArea pageName="UnontrolledClientSiderError">
+            <div>UnontrolledClientSiderError content</div>
+        </PagesMainArea>
+    );
 }
