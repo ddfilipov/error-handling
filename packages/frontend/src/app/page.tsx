@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 export default async function Home() {
     const data: Company = await apiCall();
     console.log("😜 data en page:", data);
-    return <MainArea companyData={data} />;
+    // return <MainArea companyData={data} />;
+    return (
+        <div>
+            <h2>Home Page</h2>
+        </div>
+    );
 }
 
 async function apiCall(): Promise<Company> {

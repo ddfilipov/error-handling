@@ -39,7 +39,7 @@ const Container = styled.div`
             flex-basis: 100%;
             min-height: 50px;
             align-items: center;
-            border: 1px solid #400;
+            border: 1px solid #c0c0c0;
             padding: 5px;
             margin: 0;
             width: auto;

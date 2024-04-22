@@ -20,6 +20,7 @@ const MainArea: FC<MainAreaProps> = ({ companyData }) => {
         throw new Error("algo ha pasado...");
     }
     return <UncontrolledClientError employeeData={companyData.employees} address={companyData.address} />;
+    // return <UncontrolledClientError employeeData={companyData.employees} address={companyData.address} />;
 };
 
 export default MainArea;
