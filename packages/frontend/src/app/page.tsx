@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import MainArea from "../components/MainArea";
 
 import { Company } from "@common/types";
+import { PagesMainArea } from "src/components/PagesMainArea";
 
 export const metadata: Metadata = {
     title: "Home",
@@ -14,9 +15,9 @@ export default async function Home() {
     console.log("😜 data en page:", data);
     // return <MainArea companyData={data} />;
     return (
-        <div>
-            <h2>Home Page</h2>
-        </div>
+        <PagesMainArea pageName="Home Page">
+            <p>cosas</p>
+        </PagesMainArea>
     );
 }
 
