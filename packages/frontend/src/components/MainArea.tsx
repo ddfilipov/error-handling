@@ -3,7 +3,6 @@ import { FC, useState } from "react";
 
 import UncontrolledClientError from "./UncontrolledClientError";
 
-import * as Styled from "./styled";
 import { EmployeeData } from "@common/types/index";
 
 interface MainAreaProps {
@@ -20,23 +19,7 @@ const MainArea: FC<MainAreaProps> = ({ companyData }) => {
     if (errores) {
         throw new Error("algo ha pasado...");
     }
-    return (
-        <Styled.MainContainer>
-            <Styled.ChildrenContainer>
-                <UncontrolledClientError employeeData={companyData.employees} address={companyData.address} />
-            </Styled.ChildrenContainer>
-        </Styled.MainContainer>
-    );
+    return <UncontrolledClientError employeeData={companyData.employees} address={companyData.address} />;
 };
-
-function printLine(): boolean {
-    return true;
-    try {
-        throw new Error("Client error!");
-    } catch {
-        console.error("error while clicking button");
-    }
-    console.log("I'm clicking the button!");
-}
 
 export default MainArea;
