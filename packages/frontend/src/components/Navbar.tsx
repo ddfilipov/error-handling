@@ -1,16 +1,24 @@
 "use client";
+import Link from "next/link";
 import { FC } from "react";
 import styled from "styled-components";
 
-const Navbar: FC = ({}) => {
+const Navbar: FC = () => {
     return (
         <Container>
             <ul>
-                <li>Page 1</li>
-                <li>Page 2</li>
-                <li>Page 3</li>
-                <li>Page 4</li>
-                <li>Page 5</li>
+                <Link href="/controlled-server-side-error">
+                    <li>Error Controlado - Servidor</li>
+                </Link>
+                <Link href="/uncontrolled-server-side-error">
+                    <li>Error No-Controlado - Servidor</li>
+                </Link>
+                <Link href="/controlled-client-side-error">
+                    <li>Error Controlado - Cliente</li>
+                </Link>
+                <Link href="/uncontrolled-client-side-error">
+                    <li>Error No-Controlado - Cliente</li>
+                </Link>
             </ul>
         </Container>
     );
