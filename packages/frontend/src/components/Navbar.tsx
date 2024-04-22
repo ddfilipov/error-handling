@@ -35,13 +35,16 @@ const Container = styled.div`
         padding: 0;
         margin: 0;
 
+        :hover {
+            color: #00ff00;
+        }
         li {
             display: flex;
             flex-basis: 100%;
             min-height: 50px;
             align-items: center;
             border: 1px solid #c0c0c0;
-            padding: 5px;
+            padding: 10px;
             margin: 0;
             width: auto;
         }
