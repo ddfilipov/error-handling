@@ -12,13 +12,20 @@ export const PagesMainArea: FC<PagesMainAreaProps> = ({ pageName, children }) =>
     return (
         <Container>
             <h2>{pageName}</h2>
-            <div>{children}</div>
+            <ChildrenContainer>{children}</ChildrenContainer>
         </Container>
     );
 };
 
 const Container = styled.div`
     border: 1px solid #c0c0c0;
+    h2 {
+        padding: 16px 0 0 16px;
+        border-bottom: 1px solid #c0c0c0;
+    }
     display: grid;
-    grid-template-rows: 40px 1fr;
+    grid-template-rows: 70px 1fr;
+`;
+const ChildrenContainer = styled.div`
+    padding: 16px;
 `;

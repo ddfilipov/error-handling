@@ -27,6 +27,7 @@ const Navbar: FC = () => {
 export default Navbar;
 
 const Container = styled.div`
+    border: 1px solid #c0c0c0;
     ul {
         display: flex;
         flex-direction: column;

@@ -16,7 +16,7 @@ export default async function Home() {
     // return <MainArea companyData={data} />;
     return (
         <PagesMainArea pageName="Home Page">
-            <p>cosas</p>
+            <div>Home Page content</div>
         </PagesMainArea>
     );
 }

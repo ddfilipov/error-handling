@@ -45,7 +45,4 @@ export const MainContentContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 16px;
-    div {
-        border: 1px solid #c0c0c0;
-    }
 `;
