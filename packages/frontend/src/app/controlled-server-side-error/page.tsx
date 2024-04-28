@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { DataViewer } from "src/components/DataViewer";
+import { InteractiveComponent } from "src/components/InteractiveComponent";
 import { PagesMainArea } from "src/components/PagesMainArea";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default async function ControlledServerSiderError() {
     return (
         <PagesMainArea pageName="ControlledServerSiderError">
             <DataViewer data={data} />
+            <InteractiveComponent data={data} />
         </PagesMainArea>
     );
 }
