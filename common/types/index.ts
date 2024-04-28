@@ -1,6 +1,6 @@
 export interface Company {
     companyName: string;
-    address: Adress;
+    addresses: Adress[];
     employees: EmployeeData[];
 }
 

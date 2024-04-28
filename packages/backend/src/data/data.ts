@@ -1,10 +1,11 @@
-import  {Company} from "@common/types"
+import { Company } from "@common/types";
 
-
-
-export const companyData: Company = {
+export const immutableData: Company = {
     companyName: "Patterson",
-    address: { addressName: "123 Main St", addressNumber: 123 },
+    addresses: [
+        { addressName: "Carrer de Sant Miquel", addressNumber: 51 },
+        { addressName: "Carrer Àlaba", addressNumber: 61 },
+    ],
     employees: [
         { name: "Pere", age: 30 },
         { name: "Juan", age: 25 },
