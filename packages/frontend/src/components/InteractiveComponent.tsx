@@ -7,18 +7,18 @@ interface InteractiveComponentProps {
 }
 
 export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data }) => {
-    const [algo, setAlgo] = useState<string>("algo");
+    const [value, setValue] = useState<string>("Default Value");
     return (
         <>
             <button
                 onClick={() => {
-                    setAlgo(data.addresses?.[1]?.addressName);
+                    setValue(data.addresses[3].addressName);
                 }}
             >
                 Click Me!
             </button>
             <div>
-                <p>{algo}</p>
+                <p>{value}</p>
             </div>
         </>
     );

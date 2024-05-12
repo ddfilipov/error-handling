@@ -27,21 +27,21 @@ export default function RootLayout({
         </html>
     );
 }
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     height: 100vh;
     padding: 20px;
 `;
 
-export const ChildrenContainer = styled.div`
+const ChildrenContainer = styled.div`
     display: grid;
     grid-template-rows: 10% 1fr;
     width: 1200px;
     padding: 20px;
 `;
 
-export const MainContentContainer = styled.div`
+const MainContentContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 16px;
