@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { DataViewer } from "src/components/DataViewer";
 import { InteractiveComponent } from "src/components/InteractiveComponent";
 import { PagesMainArea } from "src/components/PagesMainArea";
+import { SharedLayout } from "src/components/layout/SharedLayout";
 
 export const metadata: Metadata = {
     title: "Controlled SSE",
@@ -10,12 +11,7 @@ export const metadata: Metadata = {
 
 export default async function ControlledServerSiderError() {
     const data = await getDataFromServer();
-    return (
-        <PagesMainArea pageName="ControlledServerSiderError">
-            <DataViewer data={data} />
-            <InteractiveComponent data={data} />
-        </PagesMainArea>
-    );
+    return <SharedLayout data={data} pageName="ControlledServerSiderError" />;
 }
 
 const getDataFromServer = async () => {
