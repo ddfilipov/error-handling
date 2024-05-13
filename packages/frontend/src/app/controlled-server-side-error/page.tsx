@@ -1,7 +1,4 @@
 import { Metadata } from "next";
-import { DataViewer } from "src/components/DataViewer";
-import { InteractiveComponent } from "src/components/InteractiveComponent";
-import { PagesMainArea } from "src/components/PagesMainArea";
 import { SharedLayout } from "src/components/layout/SharedLayout";
 
 export const metadata: Metadata = {
