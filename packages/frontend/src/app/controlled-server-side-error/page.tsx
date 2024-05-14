@@ -18,9 +18,9 @@ export default async function ControlledServerSiderError() {
             interactiveNode={
                 <>
                     <InteractiveComponent data={data} actionLabel="Error" />
-                    <InteractiveComponent data={data} actionLabel="Error" />
-                    <InteractiveComponent data={data} actionLabel="Error" />
-                    <InteractiveComponent data={data} actionLabel="Error" />
+                    <InteractiveComponent data={data} actionLabel="Optional chaining" />
+                    <InteractiveComponent data={data} actionLabel="Ternary operator" />
+                    <InteractiveComponent data={data} actionLabel="Conditional rendering" />
                 </>
             }
         />
