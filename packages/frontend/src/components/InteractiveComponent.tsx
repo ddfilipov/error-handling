@@ -1,6 +1,7 @@
 "use client";
 import { Company } from "@common/types";
 import { FC, useState } from "react";
+import styled from "styled-components";
 
 interface InteractiveComponentProps {
     data: Company;
@@ -20,11 +21,19 @@ export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data }) =>
     };
 
     return (
-        <div>
+        <Container>
             <button onClick={handleClick}>Click Me!</button>
             <div>
                 <p>{value}</p>
             </div>
-        </div>
+        </Container>
     );
 };
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 200px;
+    border: 1px solid red;
+`;
