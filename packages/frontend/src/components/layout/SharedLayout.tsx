@@ -19,13 +19,9 @@ export const SharedLayout: FC<SharedLayoutProps> = ({ pageName, dataNode, intera
     return (
         <PagesMainArea pageName={pageName}>
             <MainContainer>
-                <First>
-                    {dataNode}
-                </First>
+                <First>{dataNode}</First>
                 <Second>COSAS</Second>
-                <Third>
-                    {interactiveNode}
-                </Third>
+                <Third>{interactiveNode}</Third>
             </MainContainer>
         </PagesMainArea>
     );
@@ -46,7 +42,7 @@ const Second = styled.div`
 const Third = styled.div`
     border: 1px solid red;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     grid-column-start: 1;
     grid-column-end: 3;
 `;

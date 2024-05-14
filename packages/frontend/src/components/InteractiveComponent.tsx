@@ -5,9 +5,10 @@ import styled from "styled-components";
 
 interface InteractiveComponentProps {
     data: Company;
+    actionLabel: string;
 }
 
-export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data }) => {
+export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data, actionLabel }) => {
     const [value, setValue] = useState<string>("Default Value");
 
     const handleClick = () => {
@@ -24,16 +25,14 @@ export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data }) =>
         <Container>
             <button onClick={handleClick}>Click Me!</button>
             <div>
-                <p>{value}</p>
+                <p>{actionLabel}</p>
             </div>
         </Container>
     );
 };
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    min-width: 200px;
+    min-width: 150px;
     border: 1px solid red;
 `;

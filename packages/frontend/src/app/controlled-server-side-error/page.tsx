@@ -15,7 +15,14 @@ export default async function ControlledServerSiderError() {
         <SharedLayout
             pageName="ControlledServerSiderError"
             dataNode={<DataViewer data={data} />}
-            interactiveNode={<InteractiveComponent data={data} />}
+            interactiveNode={
+                <>
+                    <InteractiveComponent data={data} actionLabel="Error" />
+                    <InteractiveComponent data={data} actionLabel="Error" />
+                    <InteractiveComponent data={data} actionLabel="Error" />
+                    <InteractiveComponent data={data} actionLabel="Error" />
+                </>
+            }
         />
     );
 }
