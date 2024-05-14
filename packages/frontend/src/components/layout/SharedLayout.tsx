@@ -26,10 +26,10 @@ export const SharedLayout: FC<SharedLayoutProps> = ({ data, pageName }) => {
                 <First>
                     <DataViewer data={data} />
                 </First>
-                <Third>COSAS</Third>
-                <Second>
+                <Second>COSAS</Second>
+                <Third>
                     <InteractiveComponent data={data} />
-                </Second>
+                </Third>
             </MainContainer>
         </PagesMainArea>
     );
@@ -40,7 +40,6 @@ const MainContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     border: 1px solid red;
     height: 100%;
-    /* grid-template-rows: 1fr; */
 `;
 const First = styled.div`
     border: 1px solid red;
@@ -50,4 +49,8 @@ const Second = styled.div`
 `;
 const Third = styled.div`
     border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
 `;

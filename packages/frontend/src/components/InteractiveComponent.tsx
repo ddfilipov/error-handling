@@ -14,17 +14,17 @@ export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data }) =>
             const addressName = data.addresses?.[3]?.addressName;
             setValue(addressName);
         } catch (error) {
-            console.error('Failed to fetch the address:', error);
-            setValue('Failed to load address');
+            console.error("Failed to fetch the address:", error);
+            setValue("Failed to load address");
         }
     };
 
     return (
-        <>
+        <div>
             <button onClick={handleClick}>Click Me!</button>
             <div>
                 <p>{value}</p>
             </div>
-        </>
+        </div>
     );
 };

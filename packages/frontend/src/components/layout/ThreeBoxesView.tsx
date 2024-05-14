@@ -7,12 +7,12 @@ import { InteractiveComponent } from "../InteractiveComponent";
 import { Company } from "@common/types";
 import styled from "styled-components";
 
-interface SharedLayoutProps {
+interface ThreeBoxesViewProps {
     pageName: string;
     data: Company;
 }
 
-export const SharedLayout: FC<SharedLayoutProps> = ({ data, pageName }) => {
+export const ThreeBoxesView: FC<ThreeBoxesViewProps> = ({ data, pageName }) => {
     return (
         <MainContainer>
             <First>
