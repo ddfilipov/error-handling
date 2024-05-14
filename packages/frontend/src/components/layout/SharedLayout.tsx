@@ -1,34 +1,30 @@
 "use client";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
+
+import styled from "styled-components";
 
 import { PagesMainArea } from "../PagesMainArea";
 import { DataViewer } from "../DataViewer";
 import { InteractiveComponent } from "../InteractiveComponent";
 
 import { Company } from "@common/types";
-import styled from "styled-components";
 
 interface SharedLayoutProps {
     pageName: string;
-    data: Company;
+    dataNode: ReactNode;
+    interactiveNode: ReactNode;
 }
 
-export const SharedLayout: FC<SharedLayoutProps> = ({ data, pageName }) => {
-    // return (
-    //     <PagesMainArea pageName={pageName}>
-    //         <DataViewer data={data} />
-    //         <InteractiveComponent data={data} />
-    //     </PagesMainArea>
-    // );
+export const SharedLayout: FC<SharedLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
     return (
         <PagesMainArea pageName={pageName}>
             <MainContainer>
                 <First>
-                    <DataViewer data={data} />
+                    {dataNode}
                 </First>
                 <Second>COSAS</Second>
                 <Third>
-                    <InteractiveComponent data={data} />
+                    {interactiveNode}
                 </Third>
             </MainContainer>
         </PagesMainArea>
