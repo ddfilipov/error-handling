@@ -26,7 +26,7 @@ export const ConditionalRendering: FC<ConditionalRenderingPRops> = ({ data }) =>
 
     return (
         <StateManagementComponent
-            actionLabel="Ternary Operator"
+            actionLabel="Conditional Rendering"
             data={data}
             dataToAccessLabel={"data?.addresses?.[3]?.addressName"}
             handleClick={handleClick}
