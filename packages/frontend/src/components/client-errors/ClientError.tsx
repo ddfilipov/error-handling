@@ -2,15 +2,15 @@
 import { Company } from "@common/types";
 import { FC, useState } from "react";
 import styled from "styled-components";
-import { StateManagementComponent } from "./StateManagementComponent";
+import { StateManagementComponent } from "../StateManagementComponent";
 
-interface InteractiveComponentProps {
+interface ClientErrorProps {
     data: Company;
     actionLabel: string;
     dataToAccessLabel?: string;
 }
 
-export const InteractiveComponent: FC<InteractiveComponentProps> = ({ data, actionLabel, dataToAccessLabel }) => {
+export const ClientError: FC<ClientErrorProps> = ({ data, actionLabel, dataToAccessLabel }) => {
     const [value, setValue] = useState<string>("Default Value");
 
     const handleClick = () => {

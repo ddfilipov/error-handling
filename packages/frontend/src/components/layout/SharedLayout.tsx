@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import { PagesMainArea } from "../PagesMainArea";
 import { DataViewer } from "../DataViewer";
-import { InteractiveComponent } from "../InteractiveComponent";
+import { ClientError } from "../client-errors/ClientError";
 
 import { Company } from "@common/types";
 
