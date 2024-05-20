@@ -7,6 +7,7 @@ interface StateManagementComponentProps {
     data: Company;
     actionLabel: string;
     dataToAccessLabel?: string;
+    currentValue: string;
     handleClick: () => void;
 }
 
@@ -14,8 +15,10 @@ export const StateManagementComponent: FC<StateManagementComponentProps> = ({
     data,
     actionLabel,
     dataToAccessLabel,
+    currentValue,
     handleClick,
 }) => {
+    console.log("a ver el val", currentValue);
     return (
         <Container>
             <button onClick={handleClick}>Click Me!</button>
@@ -24,6 +27,8 @@ export const StateManagementComponent: FC<StateManagementComponentProps> = ({
             </div>
             <p>dataToAccessLabel:</p>
             <p>{dataToAccessLabel}</p>
+            <p>currentValue:</p>
+            <p>{currentValue}</p>
         </Container>
     );
 };

@@ -13,7 +13,7 @@ export const ConditionalRendering: FC<ConditionalRenderingProps> = ({ data }) =>
 
     const handleClick = () => {
         try {
-            const addressName = data.addresses?.[3].addressName;
+            const addressName = data?.addresses?.[0]?.addressName ? data.addresses[3].addressName : "No data found";
             setValue(addressName);
         } catch (error) {
             console.error("Failed to fetch the address:", error);
@@ -27,6 +27,7 @@ export const ConditionalRendering: FC<ConditionalRenderingProps> = ({ data }) =>
             data={data}
             dataToAccessLabel={"data.addresses?.[3].addressName"}
             handleClick={handleClick}
+            currentValue={value}
         />
     );
 };

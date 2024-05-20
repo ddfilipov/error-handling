@@ -27,6 +27,7 @@ export const OptionalChaining: FC<OptionalChainingProps> = ({ data }) => {
             data={data}
             dataToAccessLabel={"data?.addresses?.[3]?.addressName"}
             handleClick={handleClick}
+            currentValue={value}
         />
     );
 };

@@ -13,7 +13,7 @@ export const ClientError: FC<ClientErrorProps> = ({ data }) => {
 
     const handleClick = () => {
         try {
-            const addressName = data.addresses?.[3].addressName;
+            const addressName = data.addresses[3].addressName;
             setValue(addressName);
         } catch (error) {
             console.error("Failed to fetch the address:", error);
@@ -25,8 +25,9 @@ export const ClientError: FC<ClientErrorProps> = ({ data }) => {
         <StateManagementComponent
             actionLabel="Error"
             data={data}
-            dataToAccessLabel={"data.addresses?.[3].addressName"}
+            dataToAccessLabel={"data.addresses[3].addressName"}
             handleClick={handleClick}
+            currentValue={value}
         />
     );
 };
