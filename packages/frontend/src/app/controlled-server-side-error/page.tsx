@@ -11,13 +11,18 @@ export const metadata: Metadata = {
 
 export default async function ControlledServerSiderError() {
     const data = await getDataFromServer();
+    
     return (
         <SharedLayout
             pageName="ControlledServerSiderError"
             dataNode={<DataViewer data={data} />}
             interactiveNode={
                 <>
-                    <InteractiveComponent data={data} actionLabel="Error" />
+                    <InteractiveComponent
+                        data={data}
+                        actionLabel="Error"
+                        dataToAccessLabel={"data.addresses[3].addressName"}
+                    />
                     <InteractiveComponent data={data} actionLabel="Optional chaining" />
                     <InteractiveComponent data={data} actionLabel="Ternary operator" />
                     <InteractiveComponent data={data} actionLabel="Conditional rendering" />
