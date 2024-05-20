@@ -5,11 +5,11 @@ import styled from "styled-components";
 import { StateManagementComponent } from "../StateManagementComponent";
 import ErrorBoundary from "../ErrorBoundary";
 
-interface ConditionalRenderingProps {
+interface ErrorBoundaryComponentProps {
     data: Company;
 }
 
-export const ConditionalRendering: FC<ConditionalRenderingProps> = ({ data }) => {
+export const ErrorBoundaryComponent: FC<ErrorBoundaryComponentProps> = ({ data }) => {
     const [value, setValue] = useState<string>("Default Value");
     const [error, setError] = useState<boolean>(false);
 
@@ -27,15 +27,14 @@ export const ConditionalRendering: FC<ConditionalRenderingProps> = ({ data }) =>
     };
 
     if (error) {
-        return <div>Error</div>; // Manually handle the error display
+        return <div>Error</div>; 
     }
-    
     return (
         <ErrorBoundary fallbackComponent={<div>Error</div>}>
             <StateManagementComponent
-                actionLabel="Conditional Rendering"
+                actionLabel="Error Boundary"
                 data={data}
-                dataToAccessLabel={"data.addresses?.[3].addressName"}
+                dataToAccessLabel={"data?.addresses[3].addressName"}
                 handleClick={handleClick}
                 currentValue={value}
             />
