@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { DataViewer } from "src/components/DataViewer";
 import { ClientError } from "src/components/client-errors/ClientError";
+import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
 import { SharedLayout } from "src/components/layout/SharedLayout";
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default async function ControlledServerSiderError() {
             dataNode={<DataViewer data={data} />}
             interactiveNode={
                 <>
-                    <ClientError data={data} actionLabel="Error" dataToAccessLabel={"data.addresses[3].addressName"} />
-                    <ClientError data={data} actionLabel="Optional chaining" />
+                    <ClientError data={data} actionLabel="Error" />
+                    <OptionalChaining data={data} actionLabel="Optional chaining" />
                     <ClientError data={data} actionLabel="Ternary operator" />
                     <ClientError data={data} actionLabel="Conditional rendering" />
                 </>
