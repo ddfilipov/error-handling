@@ -6,8 +6,6 @@ import { StateManagementComponent } from "../StateManagementComponent";
 
 interface OptionalChainingProps {
     data: Company;
-    actionLabel: string;
-    dataToAccessLabel?: string;
 }
 
 export const OptionalChaining: FC<OptionalChainingProps> = ({ data }) => {
