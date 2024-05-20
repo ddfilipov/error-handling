@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { DataViewer } from "src/components/DataViewer";
 import { ClientError } from "src/components/client-errors/ClientError";
+import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
 import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
 import { TernaryOperator } from "src/components/client-errors/TernaryOperator";
 import { SharedLayout } from "src/components/layout/SharedLayout";
@@ -22,8 +23,8 @@ export default async function ControlledServerSiderError() {
                 <>
                     <ClientError data={data} />
                     <OptionalChaining data={data} />
-                    <TernaryOperator data={data}/>
-                    <ClientError data={data}/>
+                    <TernaryOperator data={data} />
+                    <ConditionalRendering data={data} />
                 </>
             }
         />
