@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { StateManagementComponent } from "../StateManagementComponent";
 import { Company } from "@common/types";
 
-interface TernaryOperatorProps {
+interface ConditionalRenderingPRops {
     data: Company;
 }
 
-export const TernaryOperator: FC<TernaryOperatorProps> = ({ data }) => {
+export const ConditionalRendering: FC<ConditionalRenderingPRops> = ({ data }) => {
     const [value, setValue] = useState<string>("Default Value");
 
     const handleClick = () => {
