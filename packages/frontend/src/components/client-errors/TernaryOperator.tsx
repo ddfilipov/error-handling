@@ -13,7 +13,10 @@ export const TernaryOperator: FC<TernaryOperatorProps> = ({ data }) => {
 
     const handleClick = () => {
         try {
-            const addressName = data?.addresses?.[3]?.addressName;
+            // logical OR
+            const addressName = data?.addresses?.[3]?.addressName || "No data found";
+            // another way of doing it (ternary):
+            // const addressName = data?.addresses?.[3]?.addressName ? data.addresses[3].addressName : "No data found";
             setValue(addressName);
         } catch (error) {
             console.error("Failed to fetch the address:", error);

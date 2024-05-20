@@ -18,7 +18,6 @@ export const StateManagementComponent: FC<StateManagementComponentProps> = ({
     currentValue,
     handleClick,
 }) => {
-    console.log("a ver el val", currentValue);
     return (
         <Container>
             <button onClick={handleClick}>Click Me!</button>
