@@ -11,7 +11,7 @@ const ComponentThatThrows = () => {
 };
 export const ErrorBoundaryComponent: FC = ({}) => {
     return (
-        <ErrorBoundary fallbackComponent={<div>Error Bondary proccing</div>}>
+        <ErrorBoundary fallbackComponent={<div>Error Boundary proccing</div>}>
             <ComponentThatThrows />
         </ErrorBoundary>
     );
