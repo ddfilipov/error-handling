@@ -7,7 +7,7 @@ const ComponentThatThrows = () => {
         throw new Error("This is an error");
     }, []);
 
-    return <div>{`This component will never render because it throws an error.`}</div>;
+    return <div>{`Will never see this div cuz there's an error before`}</div>;
 };
 export const ErrorBoundaryComponent: FC = ({}) => {
     return (
