@@ -3,7 +3,7 @@ import { DataViewer } from "src/components/DataViewer";
 import { PagesMainArea } from "src/components/PagesMainArea";
 import { ClientError } from "src/components/client-errors/ClientError";
 import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
-import { ErrorBoundaryComponent } from "src/components/client-errors/ErrorBoundaryComponent";
+import { ErrorBoundaryAlternative } from "src/components/client-errors/ErrorBoundaryAlternative";
 import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
 import { ThreeBoxesLayout } from "src/components/layout/ThreeBoxesLayout";
 
@@ -23,7 +23,7 @@ export default async function ClientErrorsOne() {
                     <ClientError data={data} />
                     <OptionalChaining data={data} />
                     <ConditionalRendering data={data} />
-                    <ErrorBoundaryComponent data={data} />
+                    <ErrorBoundaryAlternative data={data} />
                 </>
             }
         />

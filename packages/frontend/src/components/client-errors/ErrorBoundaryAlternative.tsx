@@ -1,15 +1,14 @@
 "use client";
 import { Company } from "@common/types";
 import { FC, useState } from "react";
-import styled from "styled-components";
 import { StateManagementComponent } from "../StateManagementComponent";
 import ErrorBoundary from "../ErrorBoundary";
 
-interface ErrorBoundaryComponentProps {
+interface ErrorBoundaryAlternativeProps {
     data: Company;
 }
 
-export const ErrorBoundaryComponent: FC<ErrorBoundaryComponentProps> = ({ data }) => {
+export const ErrorBoundaryAlternative: FC<ErrorBoundaryAlternativeProps> = ({ data }) => {
     const [value, setValue] = useState<string>("Default Value");
     const [error, setError] = useState<boolean>(false);
 
@@ -27,12 +26,12 @@ export const ErrorBoundaryComponent: FC<ErrorBoundaryComponentProps> = ({ data }
     };
 
     if (error) {
-        return <div>Error</div>; 
+        return <div>Error</div>;
     }
     return (
         <ErrorBoundary fallbackComponent={<div>Error</div>}>
             <StateManagementComponent
-                actionLabel="Error Boundary"
+                actionLabel="Error Boundary Alternative"
                 data={data}
                 dataToAccessLabel={"data?.addresses[3].addressName"}
                 handleClick={handleClick}
