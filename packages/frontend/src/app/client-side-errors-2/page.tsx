@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { ErrorBoundaryComponent } from "src/components/client-errors/ErrorBoundaryComponent";
 
 import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
@@ -12,7 +13,7 @@ export default async function ClientErrorsTwo() {
 
     return (
         <OneBoxLayout pageName="Client-side error boundary (2)">
-            <p></p>
+            <ErrorBoundaryComponent />
         </OneBoxLayout>
     );
 }
