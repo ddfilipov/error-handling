@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { OneBoxLayout } from "src/components/layout/OneboxLayout";
+import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
 export const metadata: Metadata = {
     title: "Controlled SSE",
