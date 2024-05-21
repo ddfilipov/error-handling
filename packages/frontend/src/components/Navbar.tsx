@@ -7,14 +7,14 @@ const Navbar: FC = () => {
     return (
         <Container>
             <ul>
+                <Link href="/client-side-errors-1">
+                    <li>Client-side errors 1</li>
+                </Link>
                 <Link href="/controlled-server-side-error">
                     <li>Error Controlado - Servidor</li>
                 </Link>
                 <Link href="/uncontrolled-server-side-error">
                     <li>Error No-Controlado - Servidor</li>
-                </Link>
-                <Link href="/controlled-client-side-error">
-                    <li>Error Controlado - Cliente</li>
                 </Link>
                 <Link href="/uncontrolled-client-side-error">
                     <li>Error No-Controlado - Cliente</li>

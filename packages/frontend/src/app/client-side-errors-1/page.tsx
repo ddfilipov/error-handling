@@ -6,10 +6,10 @@ export const metadata: Metadata = {
     description: "Controlled CSE",
 };
 
-export default async function ControlledClientSiderError() {
+export default async function ClientErrorsOne() {
     return (
-        <PagesMainArea pageName="ControlledClientSiderError">
-            <div>ControlledClientSiderError content</div>
+        <PagesMainArea pageName="Client-side errors 1">
+            <div>Client-side errors 1</div>
         </PagesMainArea>
     );
 }
