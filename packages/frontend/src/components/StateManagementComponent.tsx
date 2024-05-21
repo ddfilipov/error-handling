@@ -39,5 +39,5 @@ const Container = styled.div`
     height: 100%;
     padding: 16px;
     min-width: 150px;
-    border: 1px solid red;
+    border: 1px solid #c0c0c0;
 `;
