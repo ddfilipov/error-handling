@@ -5,7 +5,7 @@ import { ClientError } from "src/components/client-errors/ClientError";
 import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
 import { ErrorBoundaryComponent } from "src/components/client-errors/ErrorBoundaryComponent";
 import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
-import { SharedLayout } from "src/components/layout/SharedLayout";
+import { ThreeBoxesLayout } from "src/components/layout/ThreeBoxesLayout";
 
 export const metadata: Metadata = {
     title: "Client-Side errors 1",
@@ -15,7 +15,7 @@ export default async function ClientErrorsOne() {
     const data = await getDataFromServer();
 
     return (
-        <SharedLayout
+        <ThreeBoxesLayout
             pageName="Client-side errors 1"
             dataNode={<DataViewer data={data} />}
             interactiveNode={

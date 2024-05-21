@@ -9,13 +9,13 @@ import { ClientError } from "../client-errors/ClientError";
 
 import { Company } from "@common/types";
 
-interface SharedLayoutProps {
+interface ThreeBoxesLayoutProps {
     pageName: string;
     dataNode: ReactNode;
     interactiveNode: ReactNode;
 }
 
-export const SharedLayout: FC<SharedLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
+export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
     return (
         <PagesMainArea pageName={pageName}>
             <MainContainer>

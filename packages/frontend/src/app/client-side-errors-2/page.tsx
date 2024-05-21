@@ -5,7 +5,7 @@ import { ClientError } from "src/components/client-errors/ClientError";
 import { ErrorBoundaryComponent } from "src/components/client-errors/ErrorBoundaryComponent";
 import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
 import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
-import { SharedLayout } from "src/components/layout/SharedLayout";
+import { ThreeBoxesLayout } from "src/components/layout/ThreeBoxesLayout";
 
 export const metadata: Metadata = {
     title: "Controlled SSE",
@@ -16,7 +16,7 @@ export default async function ControlledServerSiderError() {
     const data = await getDataFromServer();
 
     return (
-        <SharedLayout
+        <ThreeBoxesLayout
             pageName="Client-side error boundary (2)"
             dataNode={<DataViewer data={data} />}
             interactiveNode={
