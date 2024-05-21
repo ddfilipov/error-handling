@@ -8,10 +8,10 @@ const Navbar: FC = () => {
         <Container>
             <ul>
                 <Link href="/client-side-errors-1">
-                    <li>Client-side errors 1</li>
+                    <li>Client-side errors (1)</li>
                 </Link>
-                <Link href="/controlled-server-side-error">
-                    <li>Error Controlado - Servidor</li>
+                <Link href="/client-side-errors-2">
+                    <li>Client-side error boundary (2)</li>
                 </Link>
                 <Link href="/uncontrolled-server-side-error">
                     <li>Error No-Controlado - Servidor</li>

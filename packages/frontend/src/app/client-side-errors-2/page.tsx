@@ -17,7 +17,7 @@ export default async function ControlledServerSiderError() {
 
     return (
         <SharedLayout
-            pageName="ControlledServerSiderError"
+            pageName="Client-side error boundary (2)"
             dataNode={<DataViewer data={data} />}
             interactiveNode={
                 <>
