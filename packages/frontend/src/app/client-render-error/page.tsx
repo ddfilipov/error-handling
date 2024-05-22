@@ -4,15 +4,15 @@ import { ErrorBoundaryComponent } from "src/components/client-errors/ErrorBounda
 import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
 export const metadata: Metadata = {
-    title: "Controlled SSE",
-    description: "Controlled SSE",
+    title: "Client Render Error",
+    description: "Client Render Error",
 };
 
-export default async function ClientErrorsTwo() {
+export default async function ClientRenderError() {
     const data = await getDataFromServer();
 
     return (
-        <OneBoxLayout pageName="Client-side error boundary (2)">
+        <OneBoxLayout pageName="Client Render Error (Error Boundary)">
             <ErrorBoundaryComponent />
         </OneBoxLayout>
     );
