@@ -4,10 +4,6 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 import { PagesMainArea } from "./PagesMainArea";
-import { DataViewer } from "../DataViewer";
-import { ClientError } from "../client-errors/ClientError";
-
-import { Company } from "@common/types";
 
 interface ThreeBoxesLayoutProps {
     pageName: string;

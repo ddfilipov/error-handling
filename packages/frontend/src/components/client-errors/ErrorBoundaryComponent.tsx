@@ -1,8 +1,9 @@
 "use client";
 import { FC, useEffect } from "react";
 import ErrorBoundary from "../ErrorBoundary";
+import ErrorBoundaryLayout from "../layout/ErrorBoundaryLayout";
 
-const ComponentThatThrows = () => {
+const ComponentThatThrowsError = () => {
     useEffect(() => {
         throw new Error("This is an error");
     }, []);
@@ -11,8 +12,8 @@ const ComponentThatThrows = () => {
 };
 export const ErrorBoundaryComponent: FC = ({}) => {
     return (
-        <ErrorBoundary fallbackComponent={<div>Error Boundary proccing</div>}>
-            <ComponentThatThrows />
+        <ErrorBoundary fallbackComponent={<ErrorBoundaryLayout />}>
+            <ComponentThatThrowsError />
         </ErrorBoundary>
     );
 };
