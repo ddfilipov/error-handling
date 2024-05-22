@@ -1,9 +1,7 @@
 import { Metadata } from "next";
 
-import MainArea from "../components/MainArea";
-
 import { Company } from "@common/types";
-import { PagesMainArea } from "src/components/PagesMainArea";
+import { PagesMainArea } from "src/components/layout/PagesMainArea";
 
 export const metadata: Metadata = {
     title: "Home",

@@ -3,7 +3,7 @@ import { FC, ReactNode } from "react";
 
 import styled from "styled-components";
 
-import { PagesMainArea } from "../PagesMainArea";
+import { PagesMainArea } from "./PagesMainArea";
 
 interface OneBoxLayoutProps {
     pageName: string;
