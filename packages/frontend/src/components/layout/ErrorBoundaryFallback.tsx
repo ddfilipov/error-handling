@@ -2,9 +2,14 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-const ErrorBoundaryLayout: FC = ({}) => {
+interface ErrorBoundaryFallbackProps {
+    error: Error | null;
+}
+
+const ErrorBoundaryFallback: FC<ErrorBoundaryFallbackProps> = ({ error }) => {
     return (
         <Container>
+            {error.message}
             <StyledHeading>{`This is the Error Boundary's fallback component`}</StyledHeading>
             <h3>{`Which error are caught by Error Boundaries?`}</h3>
             <StyledList>
@@ -43,4 +48,4 @@ const StyledHeading = styled.h1`
     color: red;
 `;
 
-export default ErrorBoundaryLayout;
+export default ErrorBoundaryFallback;
