@@ -18,9 +18,9 @@ export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode
         <ErrorBoundary fallbackComponent={<ErrorBoundaryFallback error={null} />}>
             <PagesMainArea pageName={pageName}>
                 <MainContainer>
-                    <First>{dataNode}</First>
-                    <Second>COSAS</Second>
-                    <Third>{interactiveNode}</Third>
+                    <TopLeftContainer>{dataNode}</TopLeftContainer>
+                    <TopRightContainer>COSAS</TopRightContainer>
+                    <BottomContainer>{interactiveNode}</BottomContainer>
                 </MainContainer>
             </PagesMainArea>
         </ErrorBoundary>
@@ -33,13 +33,13 @@ const MainContainer = styled.div`
     border: 1px solid #c0c0c0;
     height: 100%;
 `;
-const First = styled.div`
+const TopLeftContainer = styled.div`
     border: 1px solid #c0c0c0;
 `;
-const Second = styled.div`
+const TopRightContainer = styled.div`
     border: 1px solid #c0c0c0;
 `;
-const Third = styled.div`
+const BottomContainer = styled.div`
     border: 1px solid #c0c0c0;
     display: flex;
     flex-direction: row;
