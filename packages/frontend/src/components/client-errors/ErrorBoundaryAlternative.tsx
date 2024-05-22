@@ -32,7 +32,6 @@ export const ErrorBoundaryAlternative: FC<ErrorBoundaryAlternativeProps> = ({ da
         <ErrorBoundary fallbackComponent={<div>Error</div>}>
             <StateManagementComponent
                 actionLabel="Error Boundary Alternative"
-                data={data}
                 dataToAccessLabel={"data?.addresses[3].addressName"}
                 handleClick={handleClick}
                 currentValue={value}

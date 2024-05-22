@@ -24,7 +24,6 @@ export const OptionalChaining: FC<OptionalChainingProps> = ({ data }) => {
     return (
         <StateManagementComponent
             actionLabel="Optional chaining"
-            data={data}
             dataToAccessLabel={"data?.addresses?.[3]?.addressName"}
             handleClick={handleClick}
             // IMPORTANT: `${value}` returns "undefined", {value} does NOT

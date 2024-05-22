@@ -19,7 +19,6 @@ export const ClientError: FC<ClientErrorProps> = ({ data }) => {
     return (
         <StateManagementComponent
             actionLabel="Error"
-            data={data}
             dataToAccessLabel={"data.addresses[3].addressName"}
             handleClick={handleClick}
             currentValue={value}

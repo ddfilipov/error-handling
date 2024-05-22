@@ -27,7 +27,6 @@ export const ConditionalRendering: FC<ConditionalRenderingPRops> = ({ data }) =>
     return (
         <StateManagementComponent
             actionLabel="Conditional Rendering"
-            data={data}
             dataToAccessLabel={"data?.addresses?.[3]?.addressName"}
             handleClick={handleClick}
             currentValue={value}

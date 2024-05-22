@@ -4,7 +4,6 @@ import { FC } from "react";
 import styled from "styled-components";
 
 interface StateManagementComponentProps {
-    data: Company;
     actionLabel: string;
     dataToAccessLabel?: string;
     currentValue: string;
@@ -12,7 +11,6 @@ interface StateManagementComponentProps {
 }
 
 export const StateManagementComponent: FC<StateManagementComponentProps> = ({
-    data,
     actionLabel,
     dataToAccessLabel,
     currentValue,
@@ -22,7 +20,7 @@ export const StateManagementComponent: FC<StateManagementComponentProps> = ({
         <Container>
             <button onClick={handleClick}>Click Me!</button>
             <div>
-                <p>{actionLabel}</p>
+                <h4>{actionLabel}</h4>
             </div>
             <p>dataToAccessLabel:</p>
             <p>{dataToAccessLabel}</p>
