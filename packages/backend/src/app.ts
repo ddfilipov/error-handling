@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("Hello, world qweqweqwe!");
+    res.send("Hello, world!");
 });
 
 app.get("/user", (req: Request, res: Response) => {
@@ -17,6 +17,11 @@ app.get("/user", (req: Request, res: Response) => {
     }
 
     res.json(immutableData);
+});
+
+app.get("/uncontrolled-error", (req: Request, res: Response) => {
+    throw new Error("Uncontrolled error from the backend!");
+    // res.status(500).json({ error: "Esto es un error que viene del back" });
 });
 
 const PORT: number | string = process.env.PORT || 8080;

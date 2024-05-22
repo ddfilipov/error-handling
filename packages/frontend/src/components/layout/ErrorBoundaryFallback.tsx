@@ -9,7 +9,7 @@ interface ErrorBoundaryFallbackProps {
 const ErrorBoundaryFallback: FC<ErrorBoundaryFallbackProps> = ({ error }) => {
     return (
         <Container>
-            <StyledHeading>{`This is the Error Boundary's fallback component`}</StyledHeading>
+            <StyledHeading>{`❗This is the Error Boundary's fallback component❗`}</StyledHeading>
             <div style={{ color: "#FF5555" }}>
                 <span>This is the error message (error.message):</span>
                 <p>{error.message}</p>
