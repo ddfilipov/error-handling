@@ -5,21 +5,21 @@ import styled from "styled-components";
 const ErrorBoundaryLayout: FC = ({}) => {
     return (
         <Container>
-            <p>{`Hi, I'm the Error Boundary's fallback component!`}</p>
-            <p>{`Which error are caught by Error Boundaries?`}</p>
-            <ul>
+            <StyledHeading>{`This is the Error Boundary's fallback component`}</StyledHeading>
+            <h3>{`Which error are caught by Error Boundaries?`}</h3>
+            <StyledList>
                 <li>Errors that happen during the component render phase</li>
                 <li>Render method of child components</li>
                 <li>
                     Lifecycle Method Errors for class components (oldschool: componentDidMount, componentDidUpdate...)
                 </li>
-            </ul>
-            <p>{`Which errors are not caught by Error Boundaries?`}</p>
-            <ul>
+            </StyledList>
+            <h3>{`Which errors are not caught by Error Boundaries?`}</h3>
+            <StyledList>
                 <li>Errors in event handlers (onClick)</li>
                 <li>Errors in async code, promises, useEffect hook</li>
                 <li>Server-side Rendering errors: getServerSideProps, getStaticProps</li>
-            </ul>
+            </StyledList>
         </Container>
     );
 };
@@ -29,7 +29,18 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #ff5555;
+    gap: 10px;
+`;
+
+const StyledList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 5px;
+`;
+
+const StyledHeading = styled.h1`
+    color: red;
 `;
 
 export default ErrorBoundaryLayout;
