@@ -8,7 +8,7 @@ const ChildComponentThatThrowsError = () => {
         throw new Error("This is an error that ocurrs in the child component during the render phase");
     }, []);
 
-    return <div>{`Will never see this div cuz there's an error before`}</div>;
+    return <div>{`Won't see this div cuz there's an error before`}</div>;
 };
 export const ErrorBoundaryComponent: FC = ({}) => {
     return (
