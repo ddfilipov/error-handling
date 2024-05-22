@@ -4,6 +4,8 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 import { PagesMainArea } from "./PagesMainArea";
+import ErrorBoundary from "../ErrorBoundary";
+import ErrorBoundaryFallback from "./ErrorBoundaryFallback";
 
 interface ThreeBoxesLayoutProps {
     pageName: string;
@@ -13,13 +15,15 @@ interface ThreeBoxesLayoutProps {
 
 export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
     return (
-        <PagesMainArea pageName={pageName}>
-            <MainContainer>
-                <First>{dataNode}</First>
-                <Second>COSAS</Second>
-                <Third>{interactiveNode}</Third>
-            </MainContainer>
-        </PagesMainArea>
+        <ErrorBoundary fallbackComponent={<ErrorBoundaryFallback error={null} />}>
+            <PagesMainArea pageName={pageName}>
+                <MainContainer>
+                    <First>{dataNode}</First>
+                    <Second>COSAS</Second>
+                    <Third>{interactiveNode}</Third>
+                </MainContainer>
+            </PagesMainArea>
+        </ErrorBoundary>
     );
 };
 
