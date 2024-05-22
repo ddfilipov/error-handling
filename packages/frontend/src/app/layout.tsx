@@ -4,7 +4,7 @@ import "./globals.css";
 import StyledComponentsRegistry from "./registry";
 import styled from "styled-components";
 import Navbar from "src/components/Navbar";
-import Header from "src/components/Header";
+import Header from "src/components/layout/Header";
 
 export default function RootLayout({
     children,
