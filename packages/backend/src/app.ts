@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { immutableData } from "./data/data";
 
@@ -20,6 +20,7 @@ app.get("/user", (req: Request, res: Response) => {
 });
 
 app.get("/uncontrolled-error", (req: Request, res: Response) => {
+    console.log("am I calling this thing?");
     throw new Error("Uncontrolled error from the backend!");
     // res.status(500).json({ error: "Esto es un error que viene del back" });
 });
@@ -27,6 +28,12 @@ app.get("/uncontrolled-error", (req: Request, res: Response) => {
 const PORT: number | string = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
+});
+
+// middleware that catches all errors and removes the err.stack, we just want to show the message
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error(err.stack);
+    res.status(500).json({ error: err.message });
 });
 
 const shouldThrowError: boolean = false;

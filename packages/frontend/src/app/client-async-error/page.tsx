@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Uncontrolled SSE",
 };
 
-export default async function UncontrolledServerSiderError() {
+export default async function ClientAsyncError() {
     return (
         <OneBoxLayout pageName="Client async Error (unaffected by Error Boundary)">
             <AsyncError />

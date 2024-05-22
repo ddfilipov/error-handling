@@ -1,19 +1,24 @@
 "use client";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface AsyncErrorProps {}
 
 const AsyncError: FC<AsyncErrorProps> = ({}) => {
-    const handleClick = async () => {
-        const response = await fetch("http://localhost:8080/uncontrolled-error");
-        const data = await response.json();
-        console.log("data:", data);
-        return data;
-    };
+    const [errorMessage, setErrorMessage] = useState<string>("");
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch("http://localhost:8080/uncontrolled-error");
+            const data = await response.json();
+            setErrorMessage(data);
+            return data;
+        }
+        const res = fetchData();
+    }, []);
     return (
         <Container>
-            <button onClick={handleClick}>HOLA CLICK PLS</button>
+            <p>Nothing will happen for the user</p>
+            {errorMessage}
         </Container>
     );
 };
