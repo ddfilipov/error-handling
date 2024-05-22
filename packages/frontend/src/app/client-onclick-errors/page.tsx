@@ -8,25 +8,25 @@ import { OptionalChaining } from "src/components/client-errors/OptionalChaining"
 import { ThreeBoxesLayout } from "src/components/layout/ThreeBoxesLayout";
 
 export const metadata: Metadata = {
-    title: "Client-Side errors 1",
-    description: "Client-Side errors 1",
+    title: "Client onClick errors",
+    description: "Client onClick errors",
 };
 export default async function ClientErrorsOne() {
     const data = await getDataFromServer();
 
     return (
-            <ThreeBoxesLayout
-                pageName="Client-side errors 1"
-                dataNode={<DataViewer data={data} />}
-                interactiveNode={
-                    <>
-                        <ClientError data={data} />
-                        <OptionalChaining data={data} />
-                        <ConditionalRendering data={data} />
-                        <ErrorBoundaryAlternative data={data} />
-                    </>
-                }
-            />
+        <ThreeBoxesLayout
+            pageName="Client onClick errors (unaffected by Error Boundary)"
+            dataNode={<DataViewer data={data} />}
+            interactiveNode={
+                <>
+                    <ClientError data={data} />
+                    <OptionalChaining data={data} />
+                    <ConditionalRendering data={data} />
+                    <ErrorBoundaryAlternative data={data} />
+                </>
+            }
+        />
     );
 }
 

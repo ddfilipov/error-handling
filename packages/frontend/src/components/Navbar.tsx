@@ -7,8 +7,8 @@ const Navbar: FC = () => {
     return (
         <Container>
             <ul>
-                <Link href="/client-side-errors-1">
-                    <li>Client-side errors (1)</li>
+                <Link href="/client-onclick-errors">
+                    <li>Client onClick Errors</li>
                 </Link>
                 <Link href="/client-render-error">
                     <li>Client Render Error (Error Boundary)</li>
