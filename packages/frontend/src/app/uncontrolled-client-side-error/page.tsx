@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { PagesMainArea } from "src/components/PagesMainArea";
+
+import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
 export const metadata: Metadata = {
     title: "Uncontrolled CSE",
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default async function UncontrolledClientSiderError() {
     return (
-        <PagesMainArea pageName="UncontrolledClientSiderError">
+        <OneBoxLayout pageName="Server errors??">
             <div>UncontrolledClientSiderError content</div>
-        </PagesMainArea>
+        </OneBoxLayout>
     );
 }

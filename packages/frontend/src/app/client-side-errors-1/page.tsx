@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { DataViewer } from "src/components/DataViewer";
-import { PagesMainArea } from "src/components/PagesMainArea";
 import { ClientError } from "src/components/client-errors/ClientError";
 import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
 import { ErrorBoundaryAlternative } from "src/components/client-errors/ErrorBoundaryAlternative";
