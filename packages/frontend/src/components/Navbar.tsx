@@ -13,8 +13,8 @@ const Navbar: FC = () => {
                 <Link href="/client-render-error">
                     <li>Client Render Error (Error Boundary)</li>
                 </Link>
-                <Link href="/uncontrolled-server-side-error">
-                    <li>Error No-Controlado - Servidor</li>
+                <Link href="/client-async-error">
+                    <li>Client async Error</li>
                 </Link>
                 <Link href="/uncontrolled-client-side-error">
                     <li>Error No-Controlado - Cliente</li>

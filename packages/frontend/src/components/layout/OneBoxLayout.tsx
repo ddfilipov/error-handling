@@ -20,7 +20,6 @@ export const OneBoxLayout: FC<OneBoxLayoutProps> = ({ pageName, children }) => {
 
 const MainContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
     border: 1px solid #c0c0c0;
     height: 100%;
 `;

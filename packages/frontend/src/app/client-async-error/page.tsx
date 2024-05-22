@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import AsyncError from "src/components/client-errors/AsyncError";
 
 import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 
 export default async function UncontrolledServerSiderError() {
     return (
-        <OneBoxLayout pageName="More server errors??">
-            <div>UncontrolledServerSiderError content</div>
+        <OneBoxLayout pageName="Client async Error (unaffected by Error Boundary)">
+            <AsyncError />
         </OneBoxLayout>
     );
 }
