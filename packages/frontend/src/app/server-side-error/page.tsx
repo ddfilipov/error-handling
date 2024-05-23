@@ -8,9 +8,22 @@ export const metadata: Metadata = {
 };
 
 export default async function ServerSideError() {
+    const data = await getDataFromServer();
+
     return (
         <OneBoxLayout pageName="Server side Error (error.tsx)">
             <div>Server side Error (error.tsx)</div>
         </OneBoxLayout>
     );
 }
+
+export const getDataFromServer = async () => {
+    const response = await fetch("http://localhost:8080/uncontrolled-error");
+    const data = await response.json();
+    if (!response.ok) {
+        throw new Error(
+            `We're throwing an error from our ServerSideError page if response.ok === false. Error status: ${response.status}. Error message: ${data.error}`
+        );
+    }
+    return data;
+};
