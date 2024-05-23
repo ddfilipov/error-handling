@@ -13,7 +13,7 @@ interface ThreeBoxesLayoutProps {
     interactiveNode: ReactNode;
 }
 
-export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
+export const TwoBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode, interactiveNode }) => {
     return (
         <ErrorBoundary fallbackComponent={<ErrorBoundaryFallback error={null} />}>
             <PagesMainArea pageName={pageName}>

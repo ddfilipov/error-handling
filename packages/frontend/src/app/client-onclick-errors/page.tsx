@@ -5,7 +5,7 @@ import { ClientError } from "src/components/client-errors/ClientError";
 import { ConditionalRendering } from "src/components/client-errors/ConditionalRendering";
 import { ErrorBoundaryAlternative } from "src/components/client-errors/ErrorBoundaryAlternative";
 import { OptionalChaining } from "src/components/client-errors/OptionalChaining";
-import { ThreeBoxesLayout } from "src/components/layout/ThreeBoxesLayout";
+import { TwoBoxesLayout } from "src/components/layout/TwoBoxesLayout";
 
 export const metadata: Metadata = {
     title: "Client onClick errors",
@@ -15,7 +15,7 @@ export default async function ClientErrorsOne() {
     const data = await getDataFromServer();
 
     return (
-        <ThreeBoxesLayout
+        <TwoBoxesLayout
             pageName="Client onClick errors (unaffected by Error Boundary)"
             dataNode={<DataViewer data={data} />}
             interactiveNode={
