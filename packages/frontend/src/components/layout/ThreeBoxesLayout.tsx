@@ -18,8 +18,7 @@ export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode
         <ErrorBoundary fallbackComponent={<ErrorBoundaryFallback error={null} />}>
             <PagesMainArea pageName={pageName}>
                 <MainContainer>
-                    <TopLeftContainer>{dataNode}</TopLeftContainer>
-                    <TopRightContainer>COSAS</TopRightContainer>
+                    <TopContainer>{dataNode}</TopContainer>
                     <BottomContainer>{interactiveNode}</BottomContainer>
                 </MainContainer>
             </PagesMainArea>
@@ -28,21 +27,16 @@ export const ThreeBoxesLayout: FC<ThreeBoxesLayoutProps> = ({ pageName, dataNode
 };
 
 const MainContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #c0c0c0;
     height: 100%;
 `;
-const TopLeftContainer = styled.div`
-    border: 1px solid #c0c0c0;
-`;
-const TopRightContainer = styled.div`
+const TopContainer = styled.div`
     border: 1px solid #c0c0c0;
 `;
 const BottomContainer = styled.div`
     border: 1px solid #c0c0c0;
     display: flex;
     flex-direction: row;
-    grid-column-start: 1;
-    grid-column-end: 3;
 `;
