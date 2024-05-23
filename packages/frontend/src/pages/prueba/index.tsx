@@ -1,7 +1,7 @@
-export default function PruebaPage() {
-    return (
-        <div>
-            <h1>Prueba Page</h1>
-        </div>
-    );
-}
+import withRootLayout from "src/components/layout/withRootLayout";
+
+const PruebaPage = () => {
+    return <div>Prueba Page</div>;
+};
+
+export default withRootLayout(PruebaPage);

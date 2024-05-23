@@ -31,6 +31,9 @@ const Navbar: FC = () => {
                 >
                     <li>Server error uncontrolled</li>
                 </StyledLink>
+                <StyledLink href="/prueba" isActive={pathname === "/prueba"}>
+                    <li>Server error uncontrolled</li>
+                </StyledLink>
             </ul>
         </Container>
     );
