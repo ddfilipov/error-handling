@@ -20,7 +20,7 @@ app.get("/user", (req: Request, res: Response) => {
 });
 
 app.get("/uncontrolled-error", (req: Request, res: Response) => {
-    console.log("am I calling this thing?");
+    console.log("inside uncontrolled-error in backend");
 
     // res.json(immutableData);
     throw new Error("❗Uncontrolled error from the backend!");

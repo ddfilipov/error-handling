@@ -18,17 +18,32 @@ const PagesUncontrolledError: FC<PagesUncontrolledErrorProps> = ({ data }) => (
     </PageLayout>
 );
 
-export const getServerSideProps: GetServerSideProps = async ({ query, req }) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const getDataFromServer = async () => {
         const response = await fetch("http://localhost:8080/uncontrolled-error");
+        if (!response.ok) {
+            const data = await response.json();
+            throw new Error(`Fetch error: ${data.error}`);
+        }
         const data = await response.json();
         return data;
     };
-    const data = await getDataFromServer();
-    throw new Error("ERROR EN SERVIDOR");
-    return {
-        props: { data: data },
-    };
+
+    try {
+        const data = await getDataFromServer();
+        return {
+            props: { data },
+        };
+    } catch (error) {
+        console.error("Error in getServerSideProps:", error);
+
+        return {
+            redirect: {
+                destination: "/500",
+                permanent: false,
+            },
+        };
+    }
 };
 
 export default PagesUncontrolledError;
