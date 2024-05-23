@@ -1,27 +1,36 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FC } from "react";
 import styled from "styled-components";
 
 const Navbar: FC = () => {
+    const pathname = usePathname();
+
     return (
         <Container>
             <ul>
-                <Link href="/client-onclick-errors">
+                <StyledLink href="/client-onclick-errors" isActive={pathname === "/client-onclick-errors"}>
                     <li>Client onClick Errors</li>
-                </Link>
-                <Link href="/client-render-error">
+                </StyledLink>
+                <StyledLink href="/client-render-error" isActive={pathname === "/client-render-error"}>
                     <li>Client Render Error (Error Boundary)</li>
-                </Link>
-                <Link href="/client-async-error">
+                </StyledLink>
+                <StyledLink href="/client-async-error" isActive={pathname === "/client-async-error"}>
                     <li>Client async Error</li>
-                </Link>
-                <Link href="/server-side-error-controlled">
+                </StyledLink>
+                <StyledLink
+                    href="/server-side-error-controlled"
+                    isActive={pathname === "/server-side-error-controlled"}
+                >
                     <li>Server error (controlled)</li>
-                </Link>
-                <Link href="/server-side-error-uncontrolled">
+                </StyledLink>
+                <StyledLink
+                    href="/server-side-error-uncontrolled"
+                    isActive={pathname === "/server-side-error-uncontrolled"}
+                >
                     <li>Server error uncontrolled</li>
-                </Link>
+                </StyledLink>
             </ul>
         </Container>
     );
@@ -51,5 +60,13 @@ const Container = styled.div`
             margin: 0;
             width: auto;
         }
+    }
+`;
+const StyledLink = styled(Link)<{ isActive: boolean }>`
+    text-decoration: none;
+    color: ${({ isActive }) => (isActive ? "#00ff00" : "inherit")};
+
+    li {
+        color: ${({ isActive }) => (isActive ? "#00ff00" : "inherit")};
     }
 `;
