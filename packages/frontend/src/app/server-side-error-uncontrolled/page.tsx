@@ -20,7 +20,7 @@ export default async function ServerSideErrorUnontrolled() {
     );
 }
 
-export const getDataFromServer = async () => {
+const getDataFromServer = async () => {
     const response = await fetch("http://localhost:8080/uncontrolled-error");
     const data = await response.json();
     return data;

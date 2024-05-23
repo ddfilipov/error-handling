@@ -1,7 +1,13 @@
+import { GetServerSideProps } from "next";
+import { FC } from "react";
 import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 import PageLayout from "src/components/layout/PageLayout";
 
-const WrappedPruebaPage = () => (
+interface PagesUncontrolledErrorProps {
+    data: any;
+}
+
+const PagesUncontrolledError: FC<PagesUncontrolledErrorProps> = ({ data }) => (
     <PageLayout>
         <OneBoxLayout pageName="Old pages api">
             <div>
@@ -12,4 +18,17 @@ const WrappedPruebaPage = () => (
     </PageLayout>
 );
 
-export default WrappedPruebaPage;
+export const getServerSideProps: GetServerSideProps = async ({ query, req }) => {
+    const getDataFromServer = async () => {
+        const response = await fetch("http://localhost:8080/uncontrolled-error");
+        const data = await response.json();
+        return data;
+    };
+    const data = await getDataFromServer();
+    throw new Error("ERROR EN SERVIDOR");
+    return {
+        props: { data: data },
+    };
+};
+
+export default PagesUncontrolledError;
