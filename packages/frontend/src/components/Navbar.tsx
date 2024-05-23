@@ -10,30 +10,30 @@ const Navbar: FC = () => {
     return (
         <Container>
             <ul>
-                <StyledLink href="/client-onclick-errors" isActive={pathname === "/client-onclick-errors"}>
+                <StyledLink href="/client-onclick-errors" $isActive={pathname === "/client-onclick-errors"}>
                     <li>Client onClick Errors</li>
                 </StyledLink>
-                <StyledLink href="/client-render-error" isActive={pathname === "/client-render-error"}>
+                <StyledLink href="/client-render-error" $isActive={pathname === "/client-render-error"}>
                     <li>Client Render Error (Error Boundary)</li>
                 </StyledLink>
-                <StyledLink href="/client-async-error" isActive={pathname === "/client-async-error"}>
+                <StyledLink href="/client-async-error" $isActive={pathname === "/client-async-error"}>
                     <li>Client async Error</li>
                 </StyledLink>
                 <StyledLink
                     href="/server-side-error-controlled"
-                    isActive={pathname === "/server-side-error-controlled"}
+                    $isActive={pathname === "/server-side-error-controlled"}
                 >
                     <li>Server error (controlled)</li>
                 </StyledLink>
                 <StyledLink
                     href="/server-side-error-uncontrolled"
-                    isActive={pathname === "/server-side-error-uncontrolled"}
+                    $isActive={pathname === "/server-side-error-uncontrolled"}
                 >
                     <li>Server error uncontrolled</li>
                 </StyledLink>
                 <StyledLink
                     href="/server-side-error-controlled-pages"
-                    isActive={pathname === "/server-side-error-controlled-pages"}
+                    $isActive={pathname === "/server-side-error-controlled-pages"}
                 >
                     <li>Server error (/pages): controlled</li>
                 </StyledLink>
@@ -68,11 +68,11 @@ const Container = styled.div`
         }
     }
 `;
-const StyledLink = styled(Link)<{ isActive: boolean }>`
+const StyledLink = styled(Link)<{ $isActive: boolean }>`
     text-decoration: none;
-    color: ${({ isActive }) => (isActive ? "#00ff00" : "inherit")};
+    color: ${({ $isActive: isActive }) => (isActive ? "#00ff00" : "inherit")};
 
     li {
-        color: ${({ isActive }) => (isActive ? "#00ff00" : "inherit")};
+        color: ${({ $isActive: isActive }) => (isActive ? "#00ff00" : "inherit")};
     }
 `;
