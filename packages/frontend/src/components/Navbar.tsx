@@ -16,8 +16,11 @@ const Navbar: FC = () => {
                 <Link href="/client-async-error">
                     <li>Client async Error</li>
                 </Link>
-                <Link href="/server-side-error">
-                    <li>Server error (error.tsx)</li>
+                <Link href="/server-side-error-controlled">
+                    <li>Server error (controlled)</li>
+                </Link>
+                <Link href="/server-side-error-uncontrolled">
+                    <li>Server error uncontrolled</li>
                 </Link>
             </ul>
         </Container>

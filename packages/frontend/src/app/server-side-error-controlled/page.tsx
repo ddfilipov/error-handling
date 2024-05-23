@@ -3,15 +3,15 @@ import { Metadata } from "next";
 import { OneBoxLayout } from "src/components/layout/OneBoxLayout";
 
 export const metadata: Metadata = {
-    title: "Server side Error (error.tsx)",
-    description: "Server side Error (error.tsx)",
+    title: "Server side Error (controlled)",
+    description: "Server side Error (controlled)",
 };
 
-export default async function ServerSideError() {
+export default async function ServerSideErrorControlled() {
     const data = await getDataFromServer();
 
     return (
-        <OneBoxLayout pageName="Server side Error (error.tsx)">
+        <OneBoxLayout pageName="Server side Error (controlled)">
             <div>Server side Error (error.tsx)</div>
         </OneBoxLayout>
     );
@@ -22,7 +22,7 @@ export const getDataFromServer = async () => {
     const data = await response.json();
     if (!response.ok) {
         throw new Error(
-            `We're throwing an error from our ServerSideError page if response.ok === false. Error status: ${response.status}. Error message: ${data.error}`
+            `We're throwing an error from our ServerSideErrorControlled page if response.ok === false. Error status: ${response.status}. Error message: ${data.error}`
         );
     }
     return data;
