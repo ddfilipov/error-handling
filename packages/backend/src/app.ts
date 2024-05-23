@@ -21,7 +21,7 @@ app.get("/user", (req: Request, res: Response) => {
 
 app.get("/uncontrolled-error", (req: Request, res: Response) => {
     console.log("am I calling this thing?");
-    throw new Error("Uncontrolled error from the backend!");
+    throw new Error("❗Uncontrolled error from the backend!");
     // res.status(500).json({ error: "Esto es un error que viene del back" });
 });
 

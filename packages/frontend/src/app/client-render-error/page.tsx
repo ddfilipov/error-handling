@@ -12,7 +12,7 @@ export default async function ClientRenderError() {
     const data = await getDataFromServer();
 
     return (
-        <OneBoxLayout pageName="Client Render Error (Error Boundary)">
+        <OneBoxLayout pageName="Client Render Error (caught by Error Boundary)">
             <ErrorBoundaryComponent />
         </OneBoxLayout>
     );
