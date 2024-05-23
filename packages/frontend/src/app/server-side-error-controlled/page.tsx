@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Server side Error (controlled)",
     description: "Server side Error (controlled)",
 };
-
+export const dynamic = "force-dynamic";
 export default async function ServerSideErrorControlled() {
     const data = await getDataFromServer();
 
