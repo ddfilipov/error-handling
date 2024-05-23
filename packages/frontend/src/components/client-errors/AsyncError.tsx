@@ -10,6 +10,7 @@ const AsyncError: FC<AsyncErrorProps> = ({}) => {
         async function fetchData() {
             const response = await fetch("http://localhost:8080/uncontrolled-error");
             const data = await response.json();
+            console.log("Printing the data response in a console log too:", data);
             setErrorMessage(data);
             return data;
         }
@@ -17,8 +18,9 @@ const AsyncError: FC<AsyncErrorProps> = ({}) => {
     }, []);
     return (
         <Container>
-            <p>Nothing will happen for the user</p>
-            {errorMessage}
+            <p>{`Regular users won't notice anything`}</p>
+            {/* Uncomment to proc the error.tsx component */}
+            {/* {errorMessage} */}
         </Container>
     );
 };
