@@ -12,5 +12,7 @@ export const DataViewer: FC<DataViewerProps> = ({ data }) => {
 };
 
 const Container = styled.pre`
+    display: flex;
+    justify-content: center;
     padding: 16px;
 `;
