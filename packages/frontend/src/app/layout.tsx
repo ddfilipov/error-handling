@@ -37,7 +37,7 @@ const MainContainer = styled.div`
 const ChildrenContainer = styled.div`
     display: grid;
     grid-template-rows: 10% 1fr;
-    width: 1200px;
+    width: 1400px;
     padding: 20px;
 `;
 
